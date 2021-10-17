@@ -13,6 +13,14 @@ topic = st.sidebar.selectbox(
     (df["topic"].unique())
 )
 
+
+
+x = df[df["topic"]== topic]
+
+st.write(x)
+
+
+#if topic == 
 #if topic == "Github":
     #sub_topic = st.sidebar.selectbox(
     #"Thema",
