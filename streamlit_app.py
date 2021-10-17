@@ -19,6 +19,11 @@ topic2 = st.sidebar.selectbox(
     (df[df["topic"]== topic]["sub_topic"].unique())
 )
 
+code  = topic2
+
+st.code(code, language='python')
+
+
 #x = df[df["topic"]== topic]["sub_topic"].unique()
 
 #st.write(x)
