@@ -17,5 +17,5 @@ if topic == "Github":
 )
 
 
-df = pd.read_csv("data")
+df = pd.read_csv("data.csv")
 st.write(df)
