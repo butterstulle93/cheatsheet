@@ -26,7 +26,7 @@ topic2 = st.sidebar.selectbox(
 
 x = df.loc[(df['topic']==topic) & (df['sub_topic']== topic2)]
 
-y = x["result"].values
+y = x["result"].values[0]
 
 
 code  = y
