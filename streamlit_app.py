@@ -10,7 +10,7 @@ df = pd.read_csv("data.csv", sep=";")
 
 topic = st.sidebar.selectbox(
     "Unter Thema",
-    (df["topic"])
+    (df["topic"].unique)
 )
 
 #if topic == "Github":
