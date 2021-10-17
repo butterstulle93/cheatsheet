@@ -19,7 +19,16 @@ topic2 = st.sidebar.selectbox(
     (df[df["topic"]== topic]["sub_topic"].unique())
 )
 
-code  = topic2
+x = df[df["topic"]== topic]["sub_topic"]
+
+
+#df.loc[(df['Salary_in_1000']>=100) & (df['Age']< 60) & (df['FT_Team'].str.startswith('S')),['Name','FT_Team']]
+
+
+
+
+
+code  = x[x["sub_topic"]== "topic2"]
 
 st.code(code, language='python')
 
