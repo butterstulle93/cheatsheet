@@ -24,7 +24,7 @@ topic2 = st.sidebar.selectbox(
 
 #df.loc[(df['Salary_in_1000']>=100) & (df['Age']< 60) & (df['FT_Team'].str.startswith('S')),['Name','FT_Team']]
 
-x = df.loc[(df['topic']==topic) & (df['sub_topic']== topic2)]]
+x = df.loc[(df['topic']==topic) & (df['sub_topic']== topic2)]
 
 
 
