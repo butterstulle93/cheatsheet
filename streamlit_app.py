@@ -15,3 +15,7 @@ if topic == "Github":
     "Thema",
     ("A", "B", "C", "D")
 )
+
+
+df = pd.read_csv("data")
+st.write(df)
