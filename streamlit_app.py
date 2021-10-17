@@ -28,7 +28,7 @@ x = df[df["topic"]== topic]["sub_topic"]
 
 
 
-code  = x[x["sub_topic"]== "topic2"]
+code  = x[x["sub_topic"]== topic2]
 
 st.code(code, language='python')
 
