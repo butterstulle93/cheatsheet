@@ -9,15 +9,19 @@ df = pd.read_csv("data.csv", sep=";")
 #st.write(df)
 
 topic = st.sidebar.selectbox(
-    "Unter Thema",
+    "Topic",
     (df["topic"].unique())
 )
 
 
+topic2 = st.sidebar.selectbox(
+    "Sub topic",
+    (df[df["topic"]== topic]["sub_topic"].unique())
+)
 
-x = df[df["topic"]== topic]
+#x = df[df["topic"]== topic]["sub_topic"].unique()
 
-st.write(x)
+#st.write(x)
 
 
 #if topic == 
