@@ -8,41 +8,35 @@ st.sidebar.title("Versuch")
 df = pd.read_csv("data.csv", sep=";")
 #st.write(df)
 
-topic = st.sidebar.selectbox(
+col1, col2, col3 = st.columns(3)
+
+with col1:
+    topic = st.selectbox(
     "Topic",
-    (df["topic"].unique())
-)
-
-
-topic2 = st.sidebar.selectbox(
+    (df["topic"].unique()))
+    
+with col2:
+    topic2 = st.selectbox(
     "Sub topic",
     (df[df["topic"]== topic]["sub_topic"].unique())
 )
 
+with col3:
+    x = df.loc[(df['topic']==topic) & (df['sub_topic']== topic2)]
+
+    y = x["result"].values[0]
+
+
+    code  = y
+
+    st.code(code, language='python')
 
 
 
-#df.loc[(df['Salary_in_1000']>=100) & (df['Age']< 60) & (df['FT_Team'].str.startswith('S')),['Name','FT_Team']]
-
-x = df.loc[(df['topic']==topic) & (df['sub_topic']== topic2)]
-
-y = x["result"].values[0]
 
 
-code  = y
-
-st.code(code, language='python')
 
 
-#x = df[df["topic"]== topic]["sub_topic"].unique()
-
-#st.write(x)
 
 
-#if topic == 
-#if topic == "Github":
-    #sub_topic = st.sidebar.selectbox(
-    #"Thema",
-    #("A", "B", "C", "D")
-#)
 
