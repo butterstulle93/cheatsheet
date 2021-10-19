@@ -2,26 +2,27 @@ import streamlit as st
 import pandas as pd
 
 
-st.sidebar.title("Versuch")
+
 
 
 df = pd.read_csv("data.csv", sep=";")
 #st.write(df)
 
-col1, col2, col3 = st.columns(3)
+col1, col2 = st.columns(2)
 
 with col1:
     topic = st.selectbox(
     "Topic",
     (df["topic"].unique()))
     
-with col2:
-    topic2 = st.selectbox(
-    "Sub topic",
-    (df[df["topic"]== topic]["sub_topic"].unique())
-)
+    if topic != 0:
+        topic2 = st.selectbox(
+        "Sub topic",
+        (df[df["topic"]== topic]["sub_topic"].unique())
 
-with col3:
+
+
+with col2:
     x = df.loc[(df['topic']==topic) & (df['sub_topic']== topic2)]
 
     y = x["result"].values[0]
