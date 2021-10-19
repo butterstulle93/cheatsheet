@@ -1,7 +1,7 @@
 topic;sub_topic;result
-Github;Download;"''def hello(): print(""Hello, Streamlit!“)'''"
+Github;Download;"'''def hello(): print(""Hello, Streamlit!“)'''"
 Github;Update;B
 Pandas;Merge;C
 Pandas;Read;D
 Latex;Zite;E
-Latex;enumerate;"''def hello(): print(""Hello, Streamlit!“)'''"
+Latex;enumerate;"'''def hello(): print(""Hello, Streamlit!“)'''"
