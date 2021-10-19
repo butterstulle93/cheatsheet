@@ -28,12 +28,17 @@ with col2:
     y = x["result"].values[0]
     code  = y
 
+    if topic == "Latex":
+        platz = "latex"
+    else:
+        platz = "code"
+        
 
     st.title("Code")
-    st.code(code, language='python')
+    st.platz(code, language='python')
 
-    st.title("Note")
-    st.code(code, language='python')
+    #st.title("Note")
+    #st.code(code, language='python')
 
 
 
