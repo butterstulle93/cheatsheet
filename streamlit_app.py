@@ -20,16 +20,11 @@ with col1:
         "Sub topic",
         (df[df["topic"]== topic]["sub_topic"].unique())
 
-
-
+        )
 with col2:
     x = df.loc[(df['topic']==topic) & (df['sub_topic']== topic2)]
-
     y = x["result"].values[0]
-
-
     code  = y
-
     st.code(code, language='python')
 
 
