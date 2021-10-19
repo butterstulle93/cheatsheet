@@ -13,7 +13,7 @@ col1, col2 = st.columns(2)
 with col1:
     topic = st.selectbox(
     "Topic",
-    (df["topic"].unique()))
+    (df["topic"].unique()),  int = 0)
     
     if topic != 0:
         topic2 = st.selectbox(
