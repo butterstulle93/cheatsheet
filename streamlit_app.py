@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-
+st.set_page_config(layout="wide")
 
 
 
@@ -10,7 +10,9 @@ df = pd.read_csv("data.csv", sep=";")
 
 col1, col2 = st.columns(2)
 
+
 with col1:
+    st.title("Explorer")
     topic = st.selectbox(
     "Topic",
     (df["topic"].unique()),      )
