@@ -27,6 +27,12 @@ with col2:
     x = df.loc[(df['topic']==topic) & (df['sub_topic']== topic2)]
     y = x["result"].values[0]
     code  = y
+
+
+    st.title("Code")
+    st.code(code, language='python')
+
+    st.title("Note")
     st.code(code, language='python')
 
 
